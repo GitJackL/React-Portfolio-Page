@@ -1,17 +1,12 @@
 import React from 'react';
-import Project from './Project';
-import ProjectsData from './projects.json';
-
+import Project from './project';
+import projectsData from './projects.json';
 
 function Projects() {
-  const projects = ProjectsData.projects.map((project) => (
+  const projects = projectsData.map((project) => (
     <Project
       key={project.id}
-      id={project.id}
-      title={project.title}
-      deployed={project.deployed}
-      github={project.github}
-      image={project.image}
+      projects={[project]}
     />
   ));
 

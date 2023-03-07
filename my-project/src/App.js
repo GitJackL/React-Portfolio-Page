@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 import Header from './components/header';
 import Home from './components/home';
 import Projects from './components/projects';
-import Project from './components/project';
 import Contact from './components/contact';
+import About from './components/about';
 
 function App() {
   return (
@@ -13,10 +13,10 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/projects" component={Projects} />
-          <Route exact path="/projects/:id" component={Project} />
-          <Route exact path="/ontact" component={Contact} />
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/projects" element={<Projects/>} />
+          <Route path="/about" element={<About/>} />
         </Routes>
       </div>
     </Router>
